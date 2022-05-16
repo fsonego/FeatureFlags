@@ -1,0 +1,54 @@
+{
+  "ConnectionStrings": {
+    "App.Config": "Endpoint=https://latinofeatureflags.azconfig.io;Id=OBSE-l0-s0:pfnxrD2bcjmBCKwPY8Ax;Secret=TfxSYKCT8PlYcEzX5AITM7cUepg1DxI7WMZqnZ3Bivk="
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "FeatureManagement": {
+    "Feature1": false,
+    "Feature2": false,
+    "Feature3": {
+      "EnabledFor": [
+        {
+          "Name": "Microsoft.Percentage",
+          "Parameters": {
+            "Value": 50
+          }
+        }
+      ]
+    },
+    "Feature4": {
+      "EnabledFor": [
+        {
+          "Name": "Microsoft.TimeWindow",
+          "Parameters": {
+            "Start": "2022-05-14T13:37:00-03:00",
+            "End": "2022-05-14T13:38:00-03:00"
+          }
+        }
+      ]
+    },
+    "Feature5": {
+      "EnabledFor": [
+        {
+          "Name": "RandomFilter"
+        }
+      ]
+    },
+    "Feature6": {
+      "EnabledFor": [
+        {
+          "Name": "CustomParametersFilter",
+          "Parameters": {
+            "Target": "chrome"
+          }
+        }
+      ]
+    }
+  },
+  "AllowedHosts": "*"
+}
